@@ -1,0 +1,4 @@
+name: dss_env
+channels:
+  - defaults
+prefix: /home/duncan/anaconda3/envs/dss_env
