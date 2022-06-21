@@ -1,7 +1,7 @@
 import typing as typ
 import numpy as np
 
-from point import Point
+from .point import Point
 
 
 class Points:
