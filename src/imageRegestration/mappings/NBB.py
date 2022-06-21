@@ -5,7 +5,7 @@ from models.points import Points
 from .mappingAbstract import Mapping
 from adapters.NBB_adapter import NBB_Adapter
 
-import cv2
+from src.imageRegestration.transforms.nonLinearTriangle import Triangle_transform #transforms.nonLinearTriangle import Triangle_transform
 
 class NeuralBestBuddies(Mapping):
     def __init__(self, num_landmarks) -> None:
@@ -34,11 +34,11 @@ class NeuralBestBuddies(Mapping):
         # B_cors[:,0] = imageB.size[0]*(B_cors[:, 0]/224)
         
         #construct triangle transform
-        self.__Transform = transform
+        self.__Transform = Triangle_transform
 
         #build transform
         # warp = cv2.resize(imageA, [224, 224])
-        self.img, self.vxy = transform(np.asarray(imageA), A_cors, B_cors)
+        # self.img, self.vxy = transform(np.asarray(imageA), A_cors, B_cors)
 
 
         
