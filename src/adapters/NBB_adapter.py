@@ -1,9 +1,9 @@
 import os
 import numpy as np
-from .neural_best_buddies.models import vgg19_model
-from .neural_best_buddies.algorithms import neural_best_buddies as NBBs
-from .neural_best_buddies.util import util
-from .neural_best_buddies.util import MLS
+from neural_best_buddies.models import vgg19_model
+from neural_best_buddies.algorithms import neural_best_buddies as NBBs
+from neural_best_buddies.util import util
+from neural_best_buddies.util import MLS
 
 
 class Opt:

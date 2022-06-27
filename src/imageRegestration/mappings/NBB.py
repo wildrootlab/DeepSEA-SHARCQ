@@ -2,10 +2,10 @@ import numpy as np
 
 from models.points import Points
 
-from .mappingAbstract import Mapping
+from imageRegestration.mappings.mappingAbstract import Mapping
 from adapters.NBB_adapter import NBB_Adapter
 
-from src.imageRegestration.transforms.nonLinearTriangle import Triangle_transform #transforms.nonLinearTriangle import Triangle_transform
+from imageRegestration.transforms.nonLinearTriangle import Triangle_transform #transforms.nonLinearTriangle import Triangle_transform
 
 class NeuralBestBuddies(Mapping):
     def __init__(self, num_landmarks) -> None:
