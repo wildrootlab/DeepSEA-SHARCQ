@@ -1,7 +1,7 @@
 from abc import abstractclassmethod, abstractproperty
 import numpy as np
 
-from imageRegestration.transforms.transformAbstract import Transform
+from ..transforms.transformAbstract import Transform
 
 
 class Mapping:

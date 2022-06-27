@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from imageRegestration.transforms.transformAbstract import Transform
+from .transformAbstract import Transform
 from models.points import Points
 from typing import List
 

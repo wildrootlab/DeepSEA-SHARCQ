@@ -1,4 +1,4 @@
-import imageRegestration.mappings.NBB as NBB
+from ..imageRegestration.mappings import NBB as NBB
 from PIL import Image
 
 import matplotlib.pyplot as plt
