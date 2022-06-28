@@ -3,7 +3,7 @@ name = "deepseasharcq"
 version = "0.1.0"
 description = ""
 authors = ["Gunnar <TODO@example.com>"]
-packages = [{include = "*", from = "src"}]
+packages = [{include = "deepseasharcq", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"

@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import List
 
 
-from api.deepsea_sharcq_api.aws_util import AWSUtil
+from api.deepseasharcqapi.aws_util import AWSUtil
 class PredictBody(BaseModel):
     user: str
 

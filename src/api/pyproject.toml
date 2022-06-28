@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "deepsea-sharcq-api"
+name = "deepseasharcqapi"
 version = "0.1.0"
 description = "fast api for deepsea-sharq ai solution"
 authors = ["Duncan Haywood"]
