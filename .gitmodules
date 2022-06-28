@@ -1,3 +1,0 @@
-[submodule "src/adapters/neural_best_buddies"]
-	path = src/adapters/neural_best_buddies
-	url = https://github.com/wildrootlab/neural_best_buddies
