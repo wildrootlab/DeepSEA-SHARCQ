@@ -1,19 +1,19 @@
-from ..imageRegestration.mappings import NBB as NBB
-from PIL import Image
+import sys
+import argparse
 
-import matplotlib.pyplot as plt
-
+class DeepSeaSharcq:
+    def __init__(self):
+        return NotImplementedError
+    def predict(self, data_path: str):
+        return NotImplementedError
+    def train(self, data_path: str):
+        return NotImplementedError
+    def evaluate(self, data_path: str):
+        return NotImplementedError
 def main():
+    my_parser = argparse.ArgumentParser(description='cli for deepseasharcq')(description='List the content of a folder')
 
-    atlas = Image.open("./src/adapters/neural_best_buddies/images/Atlas.png").convert('RGB')
-    brain = Image.open('./src/adapters/neural_best_buddies/images/TestBrainSection2.png').convert('RGB')
-
-    nbb = NBB.NeuralBestBuddies(100)
-    nbb.find_mapping(atlas, brain)
-
-    plt.imshow(nbb.img)
-    plt.show()
+    dss = DeepSeaSharcq()
     
-
 if __name__ == '__main__':
     main()
