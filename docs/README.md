@@ -4,7 +4,7 @@
 
 This project aims to revise an existing repository through the incorporation of robust machine learning methods, thereby promoting greater validity and minimizing human input and error in scientific data analysis. The existing MATLAB toolkit is known as 'SHARCQ': Slice Histology Alignment, Registration and Cell Quantification
 
-> See the existing SHARCQ repository https://github.com/wildrootlab/SHARCQ
+> See the existing SHARCQ repository https://github.com/wildrootlab/SHARCQ and the associated paper https://www.eneuro.org/content/9/2/ENEURO.0483-21.2022
 
 This revision aims toward a 'DeepSEA' ideal: Deep (learning) for Simplified End-to-end Automation
 
