@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "deepsea-sharcq"
+name = "deepseasharcq"
 version = "0.1.0"
 description = ""
 authors = ["Gunnar <TODO@example.com>"]
@@ -13,7 +13,6 @@ scikit-learn = "^1.1.1"
 matplotlib = "^3.5.2"
 opencv-python = "^4.6.0"
 neural-best-buddies = "^1.0.0"
-fastapi = "^0.78.0"
 
 [tool.poetry.dev-dependencies]
 
