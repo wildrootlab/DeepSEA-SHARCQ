@@ -11,8 +11,7 @@ class DeepSeaSharcq:
     def evaluate(self, data_path: str):
         return NotImplementedError
 def main():
-    my_parser = argparse.ArgumentParser(description='cli for deepseasharcq')(description='List the content of a folder')
-
+    my_parser = argparse.ArgumentParser(description='cli for deepseasharcq')
     dss = DeepSeaSharcq()
     
 if __name__ == '__main__':
