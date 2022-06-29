@@ -12,8 +12,9 @@ class AWSUtil:
         self.s3_bucket = self.s3.Bucket(self.bucket_name)
 
     def s3_upload_files(self, files: List[UploadFile]):
+        """Uploads all 'files' to s3 environent ' S3_BUCKET' in the uploads folder with class's 'folder_path' as subfolder. Intended for initial upload of files directly from fastapi. Might be refactored for more general use later. """
         # action to take in parallel 
-        def _upload_file(file):
+        def _upload_file(file, key):
             with open(file.file) as f:
                 key = f'/uploads/{self.folder_path}/{file.filename}'
                 # below should implement parallel multipart upload in theory
