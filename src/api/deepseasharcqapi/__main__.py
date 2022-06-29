@@ -3,9 +3,10 @@ from fastapi import FastAPI, UploadFile
 from pydantic import BaseModel
 from datetime import datetime
 from typing import List
+from magnum import Magnum
 
 
-from api.deepseasharcqapi.aws_util import AWSUtil
+from .aws_util import AWSUtil
 class PredictBody(BaseModel):
     user: str
 
@@ -25,3 +26,6 @@ async def predict(file: List[UploadFile], body: PredictBody):
     aws_util.run_main_ecs()
     results = aws_util.s3_download_results(file_path)
     return {'results': results}
+
+# allows usage on aws lambda
+handler = Magnum(app)
