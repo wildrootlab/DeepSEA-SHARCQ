@@ -33,4 +33,4 @@ COPY ./venv ./ FROM builder
 # activate virtual environment
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 #run ai script
-CMD python -m deepseasharcq $AI_ACTION --path $DATA_PATH
+CMD python -m deepseasharcq --ai_action=$AI_ACTION --path=$DATA_PATH
