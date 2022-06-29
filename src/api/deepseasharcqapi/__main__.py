@@ -4,9 +4,9 @@ from pydantic import BaseModel
 from datetime import datetime
 from typing import List
 from magnum import Magnum
-
-
 from .aws_util import AWSUtil
+
+
 class PredictBody(BaseModel):
     user: str
 
@@ -16,15 +16,18 @@ app = FastAPI()
 
 
 @app.post('/predict/')
-async def predict(file: List[UploadFile], body: PredictBody):
-    aws_util = AWSUtil()
-    #upload to s3
+async def predict(files: List[UploadFile], body: PredictBody):
+    #create file path and awsUtil obj
     time = str(datetime.now())
-    file_path = f'{body.user}_{time}.jpg'
-    aws_util.s3_upload_files(file, file_path)
-    aws_util.launch_ecs()
-    aws_util.run_main_ecs()
-    results = aws_util.s3_download_results(file_path)
+    folder_path = f'{body.user}_{time}'
+    aws_util = AWSUtil(folder_path)
+    #upload to s3
+    aws_util.s3_upload_files(files)
+    #run application
+    aws_util.launch_ai_ecs()
+    aws_util.run_predict_ecs()
+    #download results from ai
+    results = aws_util.s3_download_results()
     return {'results': results}
 
 # allows usage on aws lambda
