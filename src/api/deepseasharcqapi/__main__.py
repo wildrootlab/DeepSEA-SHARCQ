@@ -26,6 +26,7 @@ async def predict(files: List[UploadFile], body: PredictBody):
     #run application
     aws_util.launch_ai_ecs()
     aws_util.run_predict_ecs()
+    aws_util.close_ai_ecs()
     #download results from ai
     results = aws_util.s3_download_results()
     return {'results': results}
