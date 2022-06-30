@@ -20,12 +20,14 @@ class AWSUtil:
                 key = f'/uploads/{self.folder_path}/{file.filename}'
                 # below should implement parallel multipart upload in theory
                 self.s3_bucket.upload_fileobj(f,key)
-        # runs file uploads in parallel across all cpus - TODO hopefully it doesn't overtax the RAM (10 GB max on lambda instances)
+        # runs file uploads in parallel across all cpus - TODO hopefully it doesn't overtax the RAM (10 GB max on lambda instances) (jobs should be about 6 at max on lambda)
         Parallel(n_jobs=-1)(delayed(_upload_file)(file) for file in files)
             
-    def launch_ai_ecs(self):
+    def launch_ai_ecs(self):    
         raise NotImplementedError
     def run_predict_ecs(self):
+        raise NotImplementedError
+    def close_ai_ecs(self):
         raise NotImplementedError
     def s3_download_results(self):
         raise NotImplementedError
