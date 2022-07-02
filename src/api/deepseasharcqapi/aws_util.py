@@ -25,7 +25,7 @@ class AWSUtil:
             
     def launch_ai_ecs(self):    
         raise NotImplementedError
-    def run_predict_ecs(self):
+    def exec_predict_ecs(self):
         raise NotImplementedError
     def close_ai_ecs(self):
         raise NotImplementedError
