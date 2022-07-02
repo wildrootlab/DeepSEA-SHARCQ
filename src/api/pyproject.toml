@@ -10,9 +10,9 @@ python = "^3.8"
 fastapi = "^0.78.0"
 uvicorn = "^0.18.2"
 pydantic = "^1.9.1"
-magnum = "^14.0.0"
 python-multipart = "^0.0.5"
 boto3 = "^1.24.20"
+mangum = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
 
