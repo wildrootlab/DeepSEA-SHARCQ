@@ -2,8 +2,9 @@ from fastapi import FastAPI, UploadFile
 from pydantic import BaseModel
 from datetime import datetime
 from typing import List
-from magnum import Magnum
+from mangum import Mangum
 from .aws_util import AWSUtil
+import uvicorn
 
 
 class PredictBody(BaseModel):
@@ -29,4 +30,10 @@ async def predict(files: List[UploadFile], body: PredictBody):
     return {'results': 'we will email you with a signed url to the  predictions at the email you provided. You can download the result files with this.'} # maybe they need to do a get request at this fast api server when they have the url. TODO
 
 # allows usage on aws lambda
-handler = Magnum(app)
+handler = Mangum(app)
+
+def run_server():
+    uvicorn.run("main_api:app", port=5000, log_level="info")
+
+if __name__ == '__main__':
+    run_server()

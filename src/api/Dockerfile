@@ -33,4 +33,4 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install ./dist/*.whl
 
 #run ai script
-CMD python -m deepseasharcqapi
+CMD python -m deepseasharcqapi.main_api
